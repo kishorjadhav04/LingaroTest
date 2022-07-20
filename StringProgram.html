@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript String Program</h1>
+        <p>Output of the given string :
+            <span id="demo">
+                Output:
+            </span>
+        </p>
+
+        <script>
+            let test = "PlusMinusPlusMinuspluS";// o/p +-+-+
+            //let test = "minusPlusMinus"; //o/p -+-
+            let myArray = test.split("s");
+            let result = '';
+
+            for (let i = 0; i < myArray.length; i++) {
+                if (myArray[i] == 'Plu' || myArray[i] == 'plu') {
+                    result += '+';
+                }
+                if (myArray[i] == 'Minu' || myArray[i] == 'minu') {
+                    result += '-';
+                }
+            }
+
+            document.getElementById("demo").innerHTML = result; 
+        </script>
+
+    </body>
+
+</html>
